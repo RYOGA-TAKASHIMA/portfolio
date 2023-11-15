@@ -1,0 +1,695 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.slide_animation_left {
+  transform: translateX(-100%);
+  transition: all 1.2s;
+}
+
+.slide_animation_left.show {
+  transform: translateX(0);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 10;
+}
+header .logo {
+  text-align: center;
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: "Kosugi Maru", sans-serif;
+  letter-spacing: 2px;
+  padding: 20px 0;
+}
+
+main {
+  margin-top: 100px;
+}
+main .top_wrapper {
+  padding-bottom: 20px;
+}
+main .top_wrapper .container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+main .top_wrapper .container .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  animation: img-change 24s infinite;
+  opacity: 0;
+}
+main .top_wrapper .container .item:nth-child(1) {
+  animation-delay: 0s;
+}
+main .top_wrapper .container .item:nth-child(2) {
+  animation-delay: 8s;
+}
+main .top_wrapper .container .item:nth-child(3) {
+  animation-delay: 16s;
+}
+main .top_wrapper .container .item img {
+  width: 100%;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .top_wrapper .container .item .top_title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  align-items: center;
+}
+main .top_wrapper .container .item .top_title .title_first {
+  font-family: "Kosugi Maru", sans-serif;
+  color: white;
+  text-shadow: black 1px 0 10px;
+}
+main .top_wrapper .container .item .top_title .title_second {
+  font-family: "Kosugi Maru", sans-serif;
+  color: white;
+  text-shadow: black 1px 0 10px;
+}
+main .schebule {
+  margin: 0 30px;
+}
+main .schebule p {
+  margin: 30px 0;
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+}
+main .schebule p span {
+  font-size: 30px;
+  color: #e3c062;
+  padding: 0 20px;
+  letter-spacing: 2px;
+}
+main .news {
+  margin: 0 20px;
+}
+main .news .news_text h2 {
+  font-family: "Kosugi Maru", sans-serif;
+  color: rgba(255, 228, 196, 0.7);
+  margin: 40px 0;
+  text-align: center;
+  font-weight: lighter;
+}
+main .news .news_text p {
+  margin: 30px 0;
+  font-size: 25px;
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+main .news .news_text h3 {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: 400;
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+}
+main .news .news_box {
+  margin: 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .news .news_box img {
+  width: 15%;
+}
+main .news .news_box p {
+  width: 60%;
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+}
+main .guide {
+  background-color: #f8f2e9;
+  padding: 50px 0;
+}
+main .guide .guide_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+main .guide .guide_wrapper .guide_img img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+main .guide .guide_wrapper .guide_ditails {
+  margin-top: 40px;
+}
+main .guide .guide_wrapper .guide_ditails .guide_title {
+  display: flex;
+  justify-content: center;
+}
+main .guide .guide_wrapper .guide_ditails .guide_title img {
+  width: 15%;
+}
+main .guide .guide_wrapper .guide_ditails .guide_title h3 {
+  margin-left: 20px;
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+main .guide .guide_wrapper .guide_ditails .guide_txt {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Kosugi Maru", sans-serif;
+  margin: 30px 0;
+}
+main .guide .guide_wrapper .guide_ditails .guide_box {
+  display: flex;
+  justify-content: center;
+}
+main .guide .guide_wrapper .guide_ditails .guide_box p {
+  font-size: 20px;
+  font-family: "Kosugi Maru", sans-serif;
+}
+main .guide .guide_wrapper .guide_ditails .guide_box img {
+  width: 15%;
+}
+main .features {
+  background-color: #f8f2e9;
+  padding: 100px 15px;
+  margin-top: -50px;
+}
+main .features h2 {
+  font-family: "Kosugi Maru", sans-serif;
+  color: #e3c062;
+  font-size: 30px;
+  margin: 30px 0;
+  text-align: center;
+}
+main .features h3 {
+  margin: 20px;
+  text-align: center;
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 5px;
+}
+main .features .features_box ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .features .features_box ul li {
+  margin: 30px auto;
+  min-height: 360px;
+  border: 4px solid #e3c062;
+  border-radius: 10px;
+}
+main .features .features_box ul li h4 {
+  font-family: "Kosugi Maru", sans-serif;
+  color: #e3c062;
+  text-align: center;
+  font-size: 25px;
+  margin: 30px 0;
+}
+main .features .features_box ul li img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+main .features .features_box ul li p {
+  font-family: "Kosugi Maru", sans-serif;
+  padding: 10px 20px;
+  margin-top: 40px;
+  line-height: 20px;
+}
+main .price {
+  background-color: #f8f2e9;
+  padding: 120px 15px;
+  margin-top: -60px;
+}
+main .price .price_title {
+  width: 35%;
+  margin: 0 auto;
+  border-radius: 20px 20px 0 0;
+  background-color: #e3c062;
+}
+main .price .price_title h2 {
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  font-family: "Kosugi Maru", sans-serif;
+  color: white;
+}
+main .price .price_box {
+  margin: 0 15px;
+  padding: 40px 20px;
+  background-color: #e3c062;
+  border-radius: 20px;
+}
+main .price .price_box .price_inner {
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+}
+main .price .price_box .price_inner .price_head {
+  font-family: "Kosugi Maru", sans-serif;
+  color: #e3c062;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 20px;
+}
+main .price .price_box .price_inner .price_ditails {
+  margin: 50px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+main .price .price_box .price_inner .price_ditails .price_course {
+  text-align: center;
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 25px;
+}
+main .price .price_box .price_inner .price_ditails .price_rate {
+  padding: 0 35px;
+  font-size: 25px;
+  font-family: "Kosugi Maru", sans-serif;
+  border-radius: 30px;
+  background-color: #f8f2e9;
+}
+main .price .price_box .price_inner .price_option {
+  font-family: "Kosugi Maru", sans-serif;
+  color: #e3c062;
+  margin: 40px 0 20px 0;
+  text-align: center;
+  font-size: 20px;
+}
+main .price .price_box .price_inner .price_text_head {
+  margin: 80px 0;
+  font-size: 20px;
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+}
+main .price .price_box .price_inner .price_text {
+  margin: 40px 0;
+  font-family: "Kosugi Maru", sans-serif;
+  line-height: 23px;
+  letter-spacing: 3px;
+}
+main .staff {
+  width: 100%;
+  max-width: 1300px;
+  margin: -60px auto;
+  padding: 80px 20px;
+}
+main .staff h2 {
+  margin: 50px 0;
+  font-size: 30px;
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+}
+main .staff .tabs {
+  display: flex;
+  justify-content: center;
+}
+main .staff .tabs li {
+  width: 45%;
+}
+main .staff .tabs li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  border-bottom: 3px solid #e3c062;
+  color: black;
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 20px;
+}
+main .staff .tabs li a:hover {
+  opacity: 0.7;
+}
+main .staff .tabs li .active {
+  border-top: 3px solid #e3c062;
+  border-left: 3px solid #e3c062;
+  border-right: 3px solid #e3c062;
+  border-bottom: none;
+}
+main .staff .contents li {
+  display: none;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+main .staff .contents .active {
+  display: block;
+}
+main .staff .contents .representative {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .staff .contents .representative .representative_img img {
+  display: block;
+  margin: 30px auto;
+  max-width: 450px;
+  width: 100%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+main .staff .contents .representative .profile {
+  margin: 20px 0;
+}
+main .staff .contents .representative .profile h3 {
+  text-align: center;
+  font-family: "Kosugi Maru", sans-serif;
+  margin-bottom: 40px;
+}
+main .staff .contents .representative .profile p {
+  margin: 20px 0;
+  padding: 0 20px;
+  line-height: 25px;
+  font-family: "Kosugi Maru", sans-serif;
+}
+main .staff .contents .sub_staff {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0;
+}
+main .staff .contents .sub_staff .introduction {
+  margin: 0 auto;
+}
+main .staff .contents .sub_staff .introduction img {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1;
+  margin: 20px auto;
+  border-radius: 50%;
+}
+main .staff .contents .sub_staff .introduction h3 {
+  font-family: "Kosugi Maru", sans-serif;
+  margin-bottom: 40px;
+  text-align: center;
+}
+main .staff .contents .sub_staff .introduction p {
+  margin: 20px 0;
+  padding: 0 20px;
+  line-height: 25px;
+  font-family: "Kosugi Maru", sans-serif;
+}
+main .access {
+  margin: -50px 15px;
+  padding: 120px 0;
+  font-family: "Kosugi Maru", sans-serif;
+}
+main .access h2 {
+  margin-bottom: 60px;
+  font-family: "Kosugi Maru", sans-serif;
+  text-align: center;
+}
+main .access .access_row {
+  margin: 40px 0;
+}
+main .access .access_row .upper_row {
+  padding: 15px;
+  color: #e3c062;
+}
+main .access .access_row .lower_tier {
+  padding-left: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  font-size: 20px;
+}
+main .access iframe {
+  display: block;
+  max-width: 450px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+footer {
+  background-color: #e3c062;
+}
+footer .osteopathic_clinic {
+  padding: 60px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Kosugi Maru", sans-serif;
+}
+footer .address {
+  padding-bottom: 50px;
+}
+footer .address p {
+  text-align: center;
+  font-family: "Kosugi Maru", sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.scroll_top {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 5;
+  display: none;
+  transition: all 0.4s;
+  opacity: 0.7;
+}
+.scroll_top i {
+  font-size: 35px;
+}
+
+.scroll_top.on {
+  display: block;
+}
+.scroll_top.on:hover {
+  opacity: 1;
+}
+
+@keyframes img-change {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (min-width: 768px) {
+  .hamburger_menu {
+    background-color: #f8f2e9;
+    width: 100%;
+  }
+  .hamburger_menu ul {
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .hamburger_menu ul li {
+    margin: 0 20px;
+  }
+  .hamburger_menu ul li a {
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Kosugi Maru", sans-serif;
+    color: rgba(0, 0, 0, 0.7);
+    transition: all 0.4s;
+  }
+  .hamburger_menu ul li a:hover {
+    color: #e3c062;
+  }
+  .item .title_first {
+    font-size: 40px;
+  }
+  .item .title_first span {
+    font-size: 25px;
+  }
+  .item .title_second {
+    font-size: 35px;
+  }
+  main .news .news_text h2 {
+    font-size: 100px;
+    letter-spacing: 10px;
+  }
+  main .news .news_box p {
+    font-size: 20px;
+  }
+  main .guide_img {
+    width: 50%;
+  }
+  main .guide_ditails {
+    width: 50%;
+  }
+  main .features_box li {
+    width: 30%;
+  }
+  main .price_ditails {
+    justify-content: space-between;
+  }
+  main .representative {
+    justify-content: space-around;
+  }
+  main .representative .representative_img {
+    width: 45%;
+  }
+  main .representative .profile {
+    width: 45%;
+  }
+  main .sub_staff {
+    justify-content: space-around;
+  }
+  main .sub_staff .introduction {
+    width: 45%;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    height: 60px;
+  }
+  header .hamburger_menu {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    background-color: rgba(227, 192, 98, 0.7);
+    padding: 15px;
+    transition: all 0.4s;
+  }
+  header .hamburger_menu ul li {
+    padding: 20px 0;
+    text-align: center;
+  }
+  header .hamburger_menu ul li a {
+    font-family: "Kosugi Maru", sans-serif;
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    letter-spacing: 10px;
+  }
+  header .hamburger_menu ul li a:hover {
+    padding-right: 3px;
+  }
+  header .hamburger_menu.active {
+    top: 60px;
+  }
+  header .hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+  }
+  header .hamburger span {
+    position: absolute;
+    left: 15px;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    transition: all 0.6s;
+  }
+  header .hamburger span:nth-of-type(1) {
+    top: 20px;
+  }
+  header .hamburger span:nth-of-type(2) {
+    top: 30px;
+  }
+  header .hamburger span:nth-of-type(3) {
+    top: 40px;
+  }
+  header .hamburger.active span:nth-of-type(1) {
+    transform: translateY(10px) rotate(405deg);
+  }
+  header .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  header .hamburger.active span:nth-of-type(3) {
+    transform: translateY(-10px) rotate(-405deg);
+  }
+  main {
+    margin-top: 60px;
+  }
+  main .top_wrapper {
+    padding: 0;
+  }
+  main .top_wrapper .title_first {
+    font-size: 30px;
+  }
+  main .top_wrapper .title_first span {
+    font-size: 20px;
+  }
+  main .top_wrapper .title_second {
+    font-size: 25px;
+  }
+  main .news .news_text h2 {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+  main .news .news_text p {
+    font-size: 20px;
+  }
+  main .news .news_box p {
+    font-size: 15px;
+  }
+  main .guide_img {
+    width: 100%;
+  }
+  main .guide_ditails {
+    width: 100%;
+  }
+  main .features_box li {
+    width: 90%;
+  }
+  main .price_course {
+    width: 100%;
+  }
+  main .price_rate {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  main .representative .representative_img {
+    width: 100%;
+  }
+  main .representative .profile {
+    width: 100%;
+    margin: 50px auto;
+  }
+  main .sub_staff .introduction {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
