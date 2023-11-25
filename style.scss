@@ -27,7 +27,7 @@ a{
 
 
 header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -44,7 +44,6 @@ header{
 }
 
 main{
-    margin-top: 100px;
   .top_wrapper{
       padding-bottom: 20px; 
       .container{
@@ -671,7 +670,6 @@ footer{
         
     }
     main{
-        margin-top: 60px;
         .top_wrapper{
             padding: 0;
             

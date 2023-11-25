@@ -22,7 +22,7 @@ a {
 }
 
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -38,9 +38,6 @@ header .logo {
   padding: 20px 0;
 }
 
-main {
-  margin-top: 100px;
-}
 main .top_wrapper {
   padding-bottom: 20px;
 }
@@ -639,9 +636,6 @@ footer .address p {
   }
   header .hamburger.active span:nth-of-type(3) {
     transform: translateY(-10px) rotate(-405deg);
-  }
-  main {
-    margin-top: 60px;
   }
   main .top_wrapper {
     padding: 0;
