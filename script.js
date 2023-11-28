@@ -7,7 +7,7 @@ class box {
     //ハンバーガーメニュー//
     hamburger_menu(){
         const hamburger = document.querySelector('.hamburger');
-        const menu = document.querySelector('.hamburger_menu');
+        const menu = document.querySelector('.hamburger__menu');
         
         hamburger.addEventListener('click',()=>{
         hamburger.classList.toggle('active');
@@ -39,7 +39,7 @@ class box {
       //スクロールTOP//
       scroll() {
 
-        const scroll = document.querySelector('.scroll_top');
+        const scroll = document.querySelector('.scroll__top');
   
        window.addEventListener('scroll',()=>{
           let scrollY = window.scrollY;
@@ -61,7 +61,7 @@ class box {
       //スクロールスライド表示
       slideleft(){
 
-        const showElements = document.querySelectorAll(".slide_animation_left");
+        const showElements = document.querySelectorAll(".slide__animation__left");
            window.addEventListener("scroll",function() {
               for(let i = 0; i < showElements.length; i++){
                   const getElementDistance = showElements[i].getBoundingClientRect().top + showElements[i].clientHeight * .5;
